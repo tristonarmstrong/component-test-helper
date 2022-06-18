@@ -1,0 +1,19 @@
+{
+  "name": "component-test-helper",
+  "version": "1.0.0",
+  "description": "The Component Test Helper is a package intended to make React Jest testing far more declaritive",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tarmstrong95/component-test-helper.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tarmstrong95/component-test-helper/issues"
+  },
+  "homepage": "https://github.com/Tarmstrong95/component-test-helper#readme"
+}
