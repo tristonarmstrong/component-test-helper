@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Tarmstrong95/component-test-helper/issues"
   },
-  "homepage": "https://github.com/Tarmstrong95/component-test-helper#readme"
+  "homepage": "https://github.com/Tarmstrong95/component-test-helper#readme",
+  "publishConfig": {
+    "@tarmstrong95:registry": "https://npm.pkg.github.com"
+  }
 }
