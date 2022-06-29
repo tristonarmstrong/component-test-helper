@@ -3,8 +3,8 @@ import {
   ByRoleOptions,
   Matcher,
   SelectorMatcherOptions,
-  MatcherOptions,
-} from '@testing-library/react';
+  MatcherOptions
+} from '@testing-library/react'
 
 export type QueryExecutionType =
   | 'get'
@@ -12,22 +12,22 @@ export type QueryExecutionType =
   | 'find'
   | 'findAll'
   | 'query'
-  | 'queryAll';
+  | 'queryAll'
 
-export type RoleQueryType = 'ByRole';
+export type RoleQueryType = 'ByRole'
 
 export interface ByRoleSelection {
-  readonly query: RoleQueryType;
-  readonly id: ByRoleMatcher;
-  readonly options?: ByRoleOptions;
+  readonly query: RoleQueryType
+  readonly id: ByRoleMatcher
+  readonly options?: ByRoleOptions
 }
 
-export type TextSelectionQueryType = 'ByText' | 'ByLabelText';
+export type TextSelectionQueryType = 'ByText' | 'ByLabelText'
 
 export interface ByTextSelection {
-  readonly query: TextSelectionQueryType;
-  readonly id: Matcher;
-  readonly options?: SelectorMatcherOptions;
+  readonly query: TextSelectionQueryType
+  readonly id: Matcher
+  readonly options?: SelectorMatcherOptions
 }
 
 export type BoundAttribute =
@@ -36,34 +36,34 @@ export type BoundAttribute =
   | 'DisplayValue'
   | 'TestId'
   | 'PlaceholderText'
-  | 'Title';
+  | 'Title'
 
-export type BoundAttributeQueryType = `By${BoundAttribute}`;
+export type BoundAttributeQueryType = `By${BoundAttribute}`
 
 export interface ByBoundAttributeSelection {
-  readonly query: BoundAttributeQueryType;
-  readonly id: Matcher;
-  readonly options?: MatcherOptions;
+  readonly query: BoundAttributeQueryType
+  readonly id: Matcher
+  readonly options?: MatcherOptions
 }
 
 export type Selection =
   | ByRoleSelection
   | ByTextSelection
-  | ByBoundAttributeSelection;
+  | ByBoundAttributeSelection
 
 export interface TypeOptions {
-  realistic?: boolean;
+  realistic?: boolean
 }
 
 export type SelectionMap<
   TRootElement extends HTMLElement = HTMLElement,
   TSelectedElement extends HTMLElement = TRootElement
-> = (el: TSelectedElement | null) => TRootElement | null;
+> = (el: TSelectedElement | null) => TRootElement | null
 
-export type ContainerGetter = () => HTMLElement | Promise<HTMLElement>;
+export type ContainerGetter = () => HTMLElement | Promise<HTMLElement>
 
 export type Selection = Selection & {
-  id: string;
-  options: Record<string, string>;
-  query: string;
-};
+  id: string
+  options: Record<string, string>
+  query: string
+}
