@@ -1,5 +1,4 @@
 {
-  "extends": "./node_modules/gts/tsconfig-google.json",
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
     /* Projects */
@@ -14,7 +13,7 @@
     "lib": [
       "es6",
       "DOM"
-    ], /* Specify a set of bundled library declaration files that describe the target runtime environment. */
+    ] /* Specify a set of bundled library declaration files that describe the target runtime environment. */,
     // "jsx": "react-jsx"                                /* Specify what JSX code is generated. */,
     // "experimentalDecorators": true,                   /* Enable experimental support for TC39 stage 2 draft decorators. */
     // "emitDecoratorMetadata": true,                    /* Emit design-type metadata for decorated declarations in source files. */
@@ -94,12 +93,6 @@
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true /* Skip type checking all .d.ts files. */
   },
-  "exclude": [
-    "node_modules",
-    "lib"
-  ],
-  "include": [
-    "src/**/*.ts",
-    "test/**/*.ts"
-  ]
+  "exclude": ["node_modules", "lib"],
+  "include": ["src/**/*.ts", "test/**/*.ts"]
 }

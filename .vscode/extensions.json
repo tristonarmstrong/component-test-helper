@@ -1,8 +1,8 @@
 {
-    "recommendations": [
-        "dbaeumer.vscode-eslint",
-        "yzhang.markdown-all-in-one",
-        "davidanson.vscode-markdownlint",
-        "stylelint.vscode-stylelint"
-    ]
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "yzhang.markdown-all-in-one",
+    "davidanson.vscode-markdownlint",
+    "stylelint.vscode-stylelint"
+  ]
 }
