@@ -1,4 +1,4 @@
-import {screen, within} from './testUtils';
+import { screen, within } from './testUtils';
 
 import {
   ByRoleMatcher,
@@ -19,7 +19,7 @@ import {
   ContainerGetter,
 } from '../types/ComponentTestHelper';
 
-import {Selection} from '../types/ComponentTestHelper';
+import { Selection } from '../types/ComponentTestHelper';
 
 /**
  * @class
@@ -27,7 +27,7 @@ import {Selection} from '../types/ComponentTestHelper';
 export class ComponentTestHelper<
   TRootElement extends HTMLElement = HTMLElement,
   TSelectedElement extends HTMLElement = TRootElement
-> {
+  > {
   protected readonly selector: Selector<TRootElement, TSelectedElement>;
 
   /**
@@ -141,7 +141,7 @@ export class ComponentTestHelper<
 export class Selector<
   TRootElement extends HTMLElement = HTMLElement,
   TSelectedElement extends HTMLElement = TRootElement
-> {
+  > {
   readonly selection: Selection;
   #getContainer?: ContainerGetter;
   #map?: SelectionMap<TRootElement, TSelectedElement>;
@@ -218,23 +218,23 @@ export class Selector<
 export class SelectorBuilder<
   TRootElement extends HTMLElement = HTMLElement,
   TSelectedElement extends HTMLElement = TRootElement
-> {
+  > {
   #selection?: Selection;
   #getContainer?: ContainerGetter;
   #map?: SelectionMap<TRootElement, TSelectedElement>;
 
   byRole(role: ByRoleMatcher, options?: ByRoleOptions): this {
-    this.#selection = {query: 'ByRole', id: role, options};
+    this.#selection = { query: 'ByRole', id: role, options };
     return this;
   }
 
   byText(id: Matcher, options?: SelectorMatcherOptions): this {
-    this.#selection = {query: 'ByText', id, options};
+    this.#selection = { query: 'ByText', id, options };
     return this;
   }
 
   byLabelText(id: Matcher, options?: SelectorMatcherOptions): this {
-    this.#selection = {query: 'ByLabelText', id, options};
+    this.#selection = { query: 'ByLabelText', id, options };
     return this;
   }
 
