@@ -21,18 +21,12 @@ import {
 
 import { Selection } from '../types/ComponentTestHelper'
 
-/**
- * @class
- */
 export class ComponentTestHelper<
   TRootElement extends HTMLElement = HTMLElement,
   TSelectedElement extends HTMLElement = TRootElement
 > {
   protected readonly selector: Selector<TRootElement, TSelectedElement>
 
-  /**
-   * @param {void} configureSelector the selector to configure builder context
-   */
   constructor(
     configureSelector: (
       selectorBuilder: SelectorBuilder<TRootElement, TSelectedElement>
@@ -72,10 +66,6 @@ export class ComponentTestHelper<
     await userEvent.clear(await this.get())
   }
 
-  /**
-   * @param {string} value the value to type in the field
-   * @param {object} options Possible options to change the typeing behavior - current supported (`realistic`)
-   */
   async type(value: string, options?: TypeOptions): Promise<void> {
     if (!value) return
 
