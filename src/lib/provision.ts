@@ -1,6 +1,5 @@
 import { act } from 'react-dom/test-utils';
 export * from '@testing-library/react';
-export * from './ComponentTestHelper'
 
 /**
  * some code has callbacks/promises that fire/resolve after our
