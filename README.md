@@ -197,6 +197,6 @@ Project Link: [https://github.com/Tarmstrong95/component-test-helper](https://gi
 [issues-shield]: https://img.shields.io/github/issues/Tarmstrong95/component-test-helper.svg?style=for-the-badge
 [issues-url]: https://github.com/Tarmstrong95/component-test-helper/issues
 [license-shield]: https://img.shields.io/github/license/Tarmstrong95/component-test-helper.svg?style=for-the-badge
-[license-url]: https://github.com/Tarmstrong95/component-test-helper/blob/master/LICENSE.txt
+[license-url]: https://github.com/Tarmstrong95/component-test-helper/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/triston95strong
