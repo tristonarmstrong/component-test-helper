@@ -54,8 +54,8 @@ The Component Test Helper is a package intended to make React Jest testing far m
 
 ## About The Project
 
-This is a solution to React frontend testing written by @RyanClementsHax, turned into npm
-package by me. Yes, with permission, as an exercise for me. This package provides a class, ComponentTestHelper, to be used in Jest React frontend testing use cases. This class allows
+This is a solution to React frontend testing written by [@RyanClementsHax](https://github.com/RyanClementsHax), turned into npm
+package by me. _Yes, with permission, as an exercise for me._ This package provides a class, ComponentTestHelper, to be used in Jest React frontend testing use cases. This class allows
 the developer to abstract a lot of the tedious, duplicated, testing that often occurs
 when attempting to test the frontend, into reusable functions contained within the bounds of a given components "test helper".
 
@@ -76,7 +76,7 @@ To get the package included in your project, follow these steps
 
 ### Installation
 
-using [npm]():
+using [npm](https://www.npmjs.com/):
 
 ```bash
 npm i --save-dev component-test-helper
