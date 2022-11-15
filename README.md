@@ -170,7 +170,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Triston - [@Triston08227721](https://twitter.com/Triston08227721) - triston95strong@gmail.com
+Me - [@Triston08227721](https://twitter.com/Triston08227721) - triston95strong@gmail.com
 
 Project Link: [https://github.com/Tarmstrong95/component-test-helper](https://github.com/Tarmstrong95/component-test-helper)
 
