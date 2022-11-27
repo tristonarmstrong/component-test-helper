@@ -4,8 +4,6 @@ The Component Test Helper is a package intended to make React Jest testing far m
 
 ### Badges
 
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-[![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 [![current version](https://img.shields.io/npm/v/storybook-addon-next.svg)](https://www.npmjs.com/package/storybook-addon-next)
 
 <div id="top"></div>
@@ -64,6 +62,7 @@ when attempting to test the frontend, into reusable functions contained within t
 
 - [TypeScript](https://www.typescriptlang.org/)
 - [Jest](https://jestjs.io/)
+- [React](https://reactjs.org)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
