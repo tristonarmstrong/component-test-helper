@@ -5,6 +5,7 @@
   "main": "lib/index.js",
   "author": "Triston Armstrong",
   "license": "MIT",
+  "types": "lib/index.d.ts",
   "scripts": {
     "test:notused": "jest --config jestconfig.json",
     "test": "echo test_success",
