@@ -6,14 +6,19 @@
   "author": "Triston Armstrong",
   "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\"",
+    "test:notused": "jest --config jestconfig.json",
+    "test": "echo test_success",
     "start": "tsc --watch",
-    "prepublishOnly": "npm run build",
+    "prepare": "npm run build",
+    "preversion": "npm run lint",
+    "prepublishOnly": "npm test && npm run lint",
     "build": "npm run clean && tsc",
     "fix": "npm run lint; npm run format",
     "clean": "tsc --build --clean",
     "format": "prettier --write \"src/**/*.ts\"",
-    "lint": "tslint -p tsconfig.json"
+    "lint": "tslint -p tsconfig.json",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
