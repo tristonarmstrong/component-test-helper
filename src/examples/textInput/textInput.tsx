@@ -1,3 +1,5 @@
+import * as React from 'react'
+
 type TextInputPropsType = JSX.IntrinsicAttributes &
   React.ClassAttributes<HTMLInputElement> &
   React.InputHTMLAttributes<HTMLInputElement>

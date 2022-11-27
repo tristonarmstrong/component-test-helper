@@ -1,4 +1,5 @@
-import { render } from 'lib/provision'
+import * as React from 'react'
+import { render } from '../../'
 import { TextInputTestHelper } from './testUtils'
 import { TextInput } from './textInput'
 

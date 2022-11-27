@@ -1,10 +1,13 @@
+/* eslint-disable jest/no-standalone-expect */
+
 import {
-  ByRoleMatcher,
-  ByRoleOptions,
-  Matcher,
-  SelectorMatcherOptions,
-  MatcherOptions
+  type ByRoleMatcher,
+  type ByRoleOptions,
+  type Matcher,
+  type MatcherOptions,
+  type SelectorMatcherOptions
 } from '@testing-library/react'
+import { type SelectorBuilder } from './SelectorBuilder'
 
 export type QueryExecutionType =
   | 'get'
@@ -62,8 +65,4 @@ export type SelectionMap<
 
 export type ContainerGetter = () => HTMLElement | Promise<HTMLElement>
 
-export type Selection = Selection & {
-  id: string
-  options: Record<string, string>
-  query: string
-}
+export type UnmappableSelectorBuilder = Omit<SelectorBuilder, 'withMapping'>

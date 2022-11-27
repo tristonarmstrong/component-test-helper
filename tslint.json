@@ -4,10 +4,9 @@
     "es6": true
   },
   "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
+    "tslint:recommended",
+    "tslint-config-prettier",
     "typescript",
-    // must be last for prettier to work well with eslint
     "prettier"
   ],
   "parser": "@typescript-eslint/parser",

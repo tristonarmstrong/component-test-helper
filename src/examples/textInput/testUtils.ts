@@ -1,5 +1,5 @@
-import { ComponentTestHelper, SelectorBuilder, within } from 'lib/provision'
-import { TypeOptions } from 'types/ComponentTestHelper'
+import { ComponentTestHelper } from '../../ComponentTestHelper'
+import { TypeOptions } from '../../ComponentTestHelper.d'
 
 /** Create a new class inheriting from COmponentTestHelper for the component youre wanting to test.
  * This will contain all sub compoennts that need to be tested as well
