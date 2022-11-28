@@ -3,9 +3,25 @@ name: CI & npm publish
 on:
   push:
     branches: [main]
+    paths-ingore:
+      - 'package.json'
 
 jobs:
+  bump_version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - run: git config --global user.name 'Triston Armstrong'
+      - run: git config --global user.email 'triston95strong@gmail.com'
+      - run: git fetch
+      - run: git checkout ${{github.head_ref}}
+      - run: npm version patch -m "chore(release) | %s"
+      - run: git push origin HEAD:${{github.head_ref}}
+
   build:
+    needs: bump_version
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
