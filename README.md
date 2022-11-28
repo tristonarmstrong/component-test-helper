@@ -5,6 +5,7 @@ The Component Test Helper is a package intended to make React Jest testing far m
 ### Badges
 
 [![current version](https://img.shields.io/npm/v/storybook-addon-next.svg)](https://www.npmjs.com/package/storybook-addon-next)
+[![Release](https://github.com/Tarmstrong95/component-test-helper/actions/workflows/release-package.yml/badge.svg)](https://github.com/Tarmstrong95/component-test-helper/actions/workflows/release-package.yml)
 
 <div id="top"></div>
 
