@@ -49,6 +49,6 @@
   },
   "homepage": "https://github.com/Tarmstrong95/component-test-helper#readme",
   "publishConfig": {
-    "@tarmstrong95:registry": "https://npm.pkg.github.com"
+    "@tarmstrong95:registry": "https://registry.npmjs.org"
   }
 }
