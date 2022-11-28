@@ -11,8 +11,10 @@ jobs:
       - uses: actions/checkout@v3
         with:
           token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+          ref: ${{ github.event.pull_request.head.sha }}
       - run: git config --global user.name 'Triston Armstrong'
       - run: git config --global user.email 'triston95strong@gmail.com'
+      - run: git checkout
       - run: npm version patch -m "[RELEASE] %s"
       - run: git push
 
@@ -26,3 +28,5 @@ jobs:
           node-version: 'lts/*'
           registry-url: 'https://registry.npmjs.org'
       - run: npm ci
+      - run: npm run fix
+      - run: npm run build
