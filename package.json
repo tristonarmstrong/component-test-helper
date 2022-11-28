@@ -1,5 +1,5 @@
 {
-  "name": "@tarmstrong95/component-test-helper",
+  "name": "component-test-helper",
   "version": "1.0.0",
   "description": "The Component Test Helper is a package intended to make React Jest testing far more declaritive",
   "main": "lib/index.js",
@@ -49,6 +49,6 @@
   },
   "homepage": "https://github.com/Tarmstrong95/component-test-helper#readme",
   "publishConfig": {
-    "@tarmstrong95:registry": "https://registry.npmjs.org"
+    "registry": "https://registry.npmjs.org"
   }
 }
