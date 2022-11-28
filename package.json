@@ -8,15 +8,13 @@
   "types": "lib/index.d.ts",
   "scripts": {
     "start": "tsc --watch",
-    "prepublishOnly": "npm run fix; npm run version",
+    "prepublishOnly": "npm run fix",
     "publish": "npm run build",
     "build": "npm run clean && tsc",
     "fix": "npm run lint; npm run format",
     "clean": "tsc --build --clean",
     "format": "prettier --write \"src/**/*.ts\"",
-    "lint": "tslint -p tsconfig.json",
-    "version": "git add -A src",
-    "postversion": "git push && git push --tags"
+    "lint": "tslint -p tsconfig.json"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
