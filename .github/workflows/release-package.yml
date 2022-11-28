@@ -1,23 +1,24 @@
 name: CI & npm publish
 
 on:
-  pull_request:
+  push:
     branches: [main]
-  release:
-    types: [created]
+    paths-ingore:
+      - 'package.json'
 
 jobs:
   bump_version:
-    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
         with:
-          token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
       - run: git config --global user.name 'Triston Armstrong'
       - run: git config --global user.email 'triston95strong@gmail.com'
-      - run: npm version patch -m "[RELEASE] %s"
-      - run: git push
+      - run: git fetch
+      - run: git checkout ${{github.head_ref}}
+      - run: npm version patch -m "chore(release) | %s"
+      - run: git push origin HEAD:${{github.head_ref}}
 
   build:
     needs: bump_version
@@ -30,7 +31,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - run: npm ci
 
-  publish-gpr:
+  publish:
     needs: build
     runs-on: ubuntu-latest
     permissions:
@@ -42,7 +43,19 @@ jobs:
         with:
           node-version: 12
           registry-url: 'https://registry.npmjs.org'
+      - name: Getting Dependncies
       - run: npm ci
+      - name: Publishing to NPM
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_RELEASE_DEP}}
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          draft: false
+          prerelease: false
