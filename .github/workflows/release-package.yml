@@ -29,8 +29,19 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - run: npm ci
 
-  publish:
+  pre_release:
     needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create Github Release
+        uses: 'marvinpinto/action-automatic-releases@latest'
+        with:
+          repo_token: '${{ secrets.GITHUB_TOKEN }}'
+          automatic_release_tag: 'latest'
+          prerelease: false
+
+  publish:
+    needs: pre_release
     runs-on: ubuntu-latest
     permissions:
       packages: write
@@ -43,19 +54,9 @@ jobs:
         with:
           node-version: 12
           registry-url: 'https://registry.npmjs.org'
-      - name: Getting Dependncies
+      - name: Getting Dependencies
         run: npm ci
       - name: Publishing to NPM
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_RELEASE_DEP}}
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          draft: false
-          prerelease: false
