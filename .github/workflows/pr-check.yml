@@ -16,6 +16,8 @@ jobs:
       - run: git config --global user.email 'triston95strong@gmail.com'
       - run: git checkout
       - run: npm version patch -m "[RELEASE] %s"
+      - run: echo ${{github.ref_name}}
+      - run: echo ${{github.event.pull_request}}
       - run: git push
 
   build:
