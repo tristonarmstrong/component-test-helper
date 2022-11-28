@@ -1,5 +1,4 @@
 name: CI & npm publish
-if: github.event.pull_request.merged == true
 
 on:
   pull_request:
@@ -9,6 +8,7 @@ on:
 
 jobs:
   bump_version:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
