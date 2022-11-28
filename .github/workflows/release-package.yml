@@ -15,7 +15,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
       - run: git config --global user.name 'Triston Armstrong'
       - run: git config --global user.email 'triston95strong@gmail.com'
-      - run: npm version patch -m "chore(release) | %s"
+      - run: npm version patch -m "chore(release) %s"
       - run: git push
 
   build:
