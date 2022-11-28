@@ -12,7 +12,14 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 'lts/*'
+          registry-url: 'https://registry.npmjs.org'
+          scope: '@tarmstrong95'
       - run: npm ci
+      
+      -name: Configure Git
+      run: |
+        git config user.email "triston95strong@gmail.com"
+        git config user.name "Triston Armstrong"
 
   publish-gpr:
     needs: build
@@ -26,7 +33,15 @@ jobs:
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
+          scope: '@tarmstrong95'
       - run: npm ci
-      - run: npm publish
+      - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_RELEASE_DEP}}
+      - name: Authenticate with the GitHub Package Registry
+        run: 
+          echo "//npm.pkg.github.com:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
+
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN}}
