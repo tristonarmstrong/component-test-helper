@@ -1,0 +1,28 @@
+name: CI & npm publish
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  bump_version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+      - run: git config --global user.name 'Triston Armstrong'
+      - run: git config --global user.email 'triston95strong@gmail.com'
+      - run: npm version patch -m "[RELEASE] %s"
+      - run: git push
+
+  build:
+    needs: bump_version
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 'lts/*'
+          registry-url: 'https://registry.npmjs.org'
+      - run: npm ci
