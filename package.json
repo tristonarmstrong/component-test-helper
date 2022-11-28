@@ -1,6 +1,6 @@
 {
   "name": "component-test-helper",
-  "version": "1.0.28",
+  "version": "1.0.29",
   "description": "The Component Test Helper is a package intended to make React Jest testing far more declaritive",
   "main": "lib/index.js",
   "author": "Triston Armstrong",
