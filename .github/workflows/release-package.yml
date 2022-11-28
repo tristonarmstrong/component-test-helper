@@ -1,4 +1,5 @@
 name: CI & npm publish
+if: github.event.pull_request.merged == true
 
 on:
   pull_request:
