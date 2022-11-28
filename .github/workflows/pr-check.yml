@@ -1,4 +1,4 @@
-name: CI & npm publish
+name: Validate PR
 
 on:
   pull_request:
