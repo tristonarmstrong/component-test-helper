@@ -62,8 +62,7 @@ when attempting to test the frontend, into reusable functions contained within t
 ### Built With
 
 - [TypeScript](https://www.typescriptlang.org/)
-- [Jest](https://jestjs.io/)
-- [React](https://reactjs.org)
+- [Testing Libary](https://testing-library.com/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
