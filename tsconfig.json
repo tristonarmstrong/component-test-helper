@@ -2,7 +2,7 @@
   "compilerOptions": {
     "jsx": "react",
     "target": "ES2015",
-    "module": "commonjs",
+    "moduleResolution": "Node",
     "declaration": true,
     "outDir": "./lib",
     "strict": true

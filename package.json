@@ -8,8 +8,7 @@
   "types": "lib/index.d.ts",
   "scripts": {
     "start": "tsc --watch",
-    "prepublishOnly": "npm run fix",
-    "publish": "npm run build",
+    "prepublishOnly": "npm run fix; npm run build",
     "build": "npm run clean && tsc",
     "fix": "npm run lint; npm run format",
     "clean": "tsc --build --clean",
