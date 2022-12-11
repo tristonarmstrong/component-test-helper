@@ -6,6 +6,7 @@
   "author": "Triston Armstrong",
   "license": "MIT",
   "types": "lib/index.d.ts",
+  "type": "module",
   "scripts": {
     "start": "tsc --watch",
     "prepublishOnly": "npm run fix; npm run build",
