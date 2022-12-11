@@ -5,6 +5,8 @@ on:
     branches: [main]
     paths-ignore:
       - 'package.json'
+      - 'examples'
+      - '.github'
 
 jobs:
   bump_version:
@@ -43,9 +45,6 @@ jobs:
   publish:
     needs: pre_release
     runs-on: ubuntu-latest
-    permissions:
-      packages: write
-      contents: read
     steps:
       - name: Checkout
         uses: actions/checkout@v3
