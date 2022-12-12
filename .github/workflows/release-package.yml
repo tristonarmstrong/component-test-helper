@@ -5,9 +5,9 @@ on:
     branches: [main]
     paths-ignore:
       - 'package.json'
-      - 'examples/**/*'
-      - '.github/**/*'
-      - 'docs/**/*'
+      - 'examples/**'
+      - '.github/**'
+      - 'docs/**'
 
 jobs:
   bump_version:
