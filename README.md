@@ -1,3 +1,8 @@
+> [!IMPORTANT]
+> This is technically not my code. Im just maintaining it
+> 
+> Original Author: https://ryanclements.dev
+
 # Component-Test-Helper
 
 The Component Test Helper is a package intended to make React Jest testing far more declaritive
